@@ -3,7 +3,7 @@ import React from 'react';
 
 import BlogPosts from '../components/blog-posts';
 import Header from '../components/header';
-import Layout from '../components/layout';
+import Layout from '../components/layout2';
 import SEO from '../components/seo';
 import NotFound from '../pages/404';
 
@@ -16,11 +16,11 @@ const Index = ({ data }) => {
   }
 
   return (
-    <Layout>
+    <div className="bg-gray-100">
       <SEO title="Blog" />
       <Header metadata={data.site.siteMetadata} />
       {!noBlog && <BlogPosts posts={posts} />}
-    </Layout>
+    </div>
   );
 };
 
@@ -50,6 +50,13 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            featuredImage{
+              childImageSharp {
+                sizes(maxWidth: 850) {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
           }
         }
       }

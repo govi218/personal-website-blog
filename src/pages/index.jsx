@@ -52,15 +52,6 @@ export const pageQuery = graphql`
           description
           link
         }
-        experience {
-          name
-          description
-          link
-        }
-        skills {
-          name
-          description
-        }
       }
     }
     allMarkdownRemark(

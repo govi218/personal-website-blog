@@ -5,12 +5,14 @@
 @layer base {
   .blog-content {
     @apply text-gray-600;
-    @apply max-w-screen-md;
+  }
+
+  .blog-content a:hover {
+    @apply text-blue-800;
   }
 
   .blog-content a {
-    @apply text-black;
-    @apply underline;
+    @apply text-blue-500;
   }
 
   .blog-content p,
@@ -20,12 +22,28 @@
 
   .blog-content ul,
   .blog-content ol {
-    @apply mb-6;
-    @apply ml-10;
+    @apply my-4 mx-0;
+    @apply py-0 pl-10;
+  }
+
+  .blog-content ol p {
+    @apply m-0;
+  }
+
+  .blog-content ul p {
+    @apply m-0;
   }
 
   .blog-content ul li {
     @apply list-disc;
+  }
+
+  .blog-content ul ul {
+    @apply m-0;
+  }
+
+  .blog-content ul ul li {
+    @apply list-circle;
   }
 
   .blog-content ol li {
@@ -75,11 +93,17 @@
 
   .blog-content blockquote {
     @apply pl-5;
+    @apply ml-5;
     @apply border-l-4;
   }
 
   .blog-content hr {
     @apply my-6;
+  }
+
+  .blog-content img {
+    @apply w-full;
+    @apply h-auto;
   }
 }
 
