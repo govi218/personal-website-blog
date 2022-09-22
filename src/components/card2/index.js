@@ -17,7 +17,7 @@ import React from 'react';
 // `;
 
 const classes = {
-  wrapper: 'bg-white border border-solid border-slate-200 shadow-card mb-10 md:border-x-0 2xl:mx-48 py-4 px-4 lg:px-130px',
+  wrapper: 'bg-white border border-solid border-slate-200 shadow-card mt-10 md:border-x-0 2xl:mx-48 py-4 px-4 lg:px-130px',
 };
 
 function Card ({ children }) {

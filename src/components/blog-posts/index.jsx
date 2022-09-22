@@ -9,19 +9,17 @@ const BlogPosts = ({ posts }) => {
   console.log(posts)
   return (
     <div>
-      <Container>
-        {posts.map((post) => (
-          <Card key={post.node.fields.slug}>
-            <Summary
-              date={post.node.frontmatter.date}
-              title={post.node.frontmatter.title}
-              excerpt={post.node.excerpt}
-              image={post.node.frontmatter.featuredImage}
-              slug={post.node.fields.slug}
-            />
-          </Card>
-        ))}
-      </Container>
+      {posts.map((post) => (
+        <Card key={post.node.fields.slug}>
+          <Summary
+            date={post.node.frontmatter.date}
+            title={post.node.frontmatter.title}
+            excerpt={post.node.excerpt}
+            image={post.node.frontmatter.featuredImage}
+            slug={post.node.fields.slug}
+          />
+        </Card>
+      ))}
     </div>
   );
 };

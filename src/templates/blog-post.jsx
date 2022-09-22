@@ -1,27 +1,38 @@
 import { graphql } from 'gatsby';
 import moment from 'moment';
 import React from 'react';
+import Link from 'gatsby-link';
 
-import Header from '../components/header';
+import BlogHeader from '../components/blog-header';
 import Container from '../components/container2';
 import Card from '../components/card2';
 import FeaturedImage from '../components/featured-image2';
 import SEO from '../components/seo';
+import Share from '../components/share'
 
 const classes = {
   wrapper: 'mt-16 blog-content',
-  title: 'mt-16 text-4xl text-center text-gray-700 font-bold',
-  date: 'text-gray-600 font-light text-center',
+  title: 'mt-16 text-4xl text-center text-gray-800 font-bold',
+  date: 'text-gray-800 font-light text-center',
   line: 'bg-gray-900 block my-12 mx-auto h-px w-40',
+  nav: 'my-12 text-center h-10',
+  navButton: 'border border-solid border-gray-300 rounded-2xl inline-block m-1 py-1 px-4 no-underline hover:border-gray-800',
 };
 
-const BlogPost = ({ data }) => {
-  const post = data.markdownRemark;
+class BlogPost extends React.Component {
 
-  return (
-    <div>
+  render() {
+    const post = this.props.data.markdownRemark;
+    const { previous, next } = this.props.pageContext;
+
+    let url = '';
+    if (typeof window !== `undefined`) {
+      url = window.location.href;
+    }
+
+    return (
       <Container>
-        <Header metadata={data.site.siteMetadata} />
+        <BlogHeader metadata={this.props.data.site.siteMetadata} />
         <SEO title={post.frontmatter.title} />
         <Card>
           {post.frontmatter.featuredImage && (
@@ -38,10 +49,23 @@ const BlogPost = ({ data }) => {
             className={classes.wrapper}
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
+          <Share url={url} title={post.frontmatter.title} />
         </Card>
+        <div className={classes.nav}>
+          {previous && (
+            <Link className={classes.navButton} to={previous.fields.slug} rel="prev">
+              ← {previous.frontmatter.title}
+            </Link>
+          )}
+          {next && (
+            <Link className={classes.navButton} to={next.fields.slug} rel="next">
+              {next.frontmatter.title} →
+            </Link>
+          )}
+        </div>
       </Container>
-    </div>
-  );
+    );
+  }
 };
 
 export default BlogPost;

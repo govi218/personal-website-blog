@@ -2,8 +2,8 @@ import { graphql } from 'gatsby';
 import React from 'react';
 
 import BlogPosts from '../components/blog-posts';
-import Header from '../components/header';
-import Layout from '../components/layout2';
+import BlogHeader from '../components/blog-header';
+import Container from '../components/container2';
 import SEO from '../components/seo';
 import NotFound from '../pages/404';
 
@@ -17,9 +17,11 @@ const Index = ({ data }) => {
 
   return (
     <div className="bg-gray-100">
-      <SEO title="Blog" />
-      <Header metadata={data.site.siteMetadata} />
-      {!noBlog && <BlogPosts posts={posts} />}
+      <Container>
+        <SEO title="Blog" />
+        <BlogHeader metadata={data.site.siteMetadata} />
+        {!noBlog && <BlogPosts posts={posts} />}
+      </Container>
     </div>
   );
 };
