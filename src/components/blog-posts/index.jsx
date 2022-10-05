@@ -1,7 +1,5 @@
 import React from 'react';
 
-import Layout from '../layout2';
-import Container from '../container2';
 import Summary from '../summary2';
 import Card from '../card2';
 
