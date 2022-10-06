@@ -11,13 +11,12 @@ const Share = ({ title, url }) => {
   const text = encodeURI(title);
   return (
     <div className={classes.wrapper}>
-      <h2></h2>
       <a
         className={classes.button}
         href={`https://www.facebook.com/sharer/sharer.php?u=${encodedURL}`}
         target="_blank"
+        rel="noreferrer"
         aria-label="Share on Facebook"
-        rel="noopener"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -37,8 +36,8 @@ const Share = ({ title, url }) => {
         className={classes.button}
         href={`https://twitter.com/intent/tweet?text=${text}&url=${encodedURL}`}
         target="_blank"
+        rel="noreferrer"
         aria-label="Share on Twitter"
-        rel="noopener"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -58,8 +57,8 @@ const Share = ({ title, url }) => {
         className={classes.button}
         href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodedURL}&title=${text}`}
         target="_blank"
+        rel="noreferrer"
         aria-label="Share on Linkedin"
-        rel="noopener"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
