@@ -4,9 +4,9 @@ import React from 'react';
 import Link from 'gatsby-link';
 
 import BlogHeader from '../components/blog-header';
-import Container from '../components/container2';
-import Card from '../components/card2';
-import FeaturedImage from '../components/featured-image2';
+import Container from '../components/container';
+import Card from '../components/card';
+import FeaturedImage from '../components/featured-image';
 import SEO from '../components/seo';
 import Share from '../components/share'
 

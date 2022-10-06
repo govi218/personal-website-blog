@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Summary from '../summary2';
-import Card from '../card2';
+import Summary from '../summary';
+import Card from '../card';
 
 const BlogPosts = ({ posts }) => {
   console.log(posts)

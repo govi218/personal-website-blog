@@ -3,7 +3,7 @@ import React from 'react';
 
 import BlogPosts from '../components/blog-posts';
 import BlogHeader from '../components/blog-header';
-import Container from '../components/container2';
+import Container from '../components/container';
 import SEO from '../components/seo';
 import NotFound from '../pages/404';
 

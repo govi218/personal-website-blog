@@ -1,6 +1,6 @@
 import React from 'react';
 
-import FeaturedImage from '../featured-image2';
+import FeaturedImage from '../featured-image';
 import Link from 'gatsby-link';
 
 const classes = {
