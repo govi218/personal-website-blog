@@ -7,7 +7,7 @@ import BlogHeader from '../components/blog-header';
 import Container from '../components/container';
 import Card from '../components/card';
 import FeaturedImage from '../components/featured-image';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 import Share from '../components/share'
 
 const classes = {
@@ -33,7 +33,7 @@ class BlogPost extends React.Component {
     return (
       <Container>
         <BlogHeader metadata={this.props.data.site.siteMetadata} />
-        <SEO title={post.frontmatter.title} />
+        <Seo title={post.frontmatter.title} />
         <Card>
           {post.frontmatter.featuredImage && (
             <FeaturedImage

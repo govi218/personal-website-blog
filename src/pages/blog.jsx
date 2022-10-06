@@ -4,7 +4,7 @@ import React from 'react';
 import BlogPosts from '../components/blog-posts';
 import BlogHeader from '../components/blog-header';
 import Container from '../components/container';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 import NotFound from '../pages/404';
 
 const Index = ({ data }) => {
@@ -18,7 +18,7 @@ const Index = ({ data }) => {
   return (
     <div className="bg-gray-100">
       <Container>
-        <SEO title="Blog" />
+        <Seo title="Blog" />
         <BlogHeader metadata={data.site.siteMetadata} />
         {!noBlog && <BlogPosts posts={posts} />}
       </Container>
