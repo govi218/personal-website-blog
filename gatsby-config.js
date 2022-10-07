@@ -15,7 +15,10 @@ module.exports = {
     // Optional: LinkedIn account URL
     linkedin: `https://www.linkedin.com/in/govindmohan218/`,
     // Content of the About Me section
-    about: `I have been involved in software development since I was 12, although I was fascinated by technology long before. This fascination grew with my studies of Computer Science, Philosophy and Economics at University of Toronto.
+    about: `I am a blockchain developer and researcher who has been in the space since 2014.
+I have participated in several hackathons, notably creating a top 10 hack at HackFS 2020 and 2022. I was also an advisor to Legal Hackers at UofT Law. The group organized a participating node in Global Legal Hackathon 2020 where the winning team went on to start a company.
+
+I am a passionate believer in data privacy and a free and fair internet.
 
 I have several research interests, of which I am currently exploring peer-to-peer networking and document ingestion. I am very interested in information theory, fractals, non-standard analysis, category/type theory, and neurosymbolic/mathematical logic (did I miss any buzzwords?).`,
     // Optional: List your projects, they must have `name` and `description`. `link` is optional.
