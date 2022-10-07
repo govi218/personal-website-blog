@@ -45,6 +45,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         name
+        email
         title
         description
         about

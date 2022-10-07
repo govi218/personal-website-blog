@@ -14,6 +14,8 @@ module.exports = {
     github: `https://github.com/govi218`,
     // Optional: LinkedIn account URL
     linkedin: `https://www.linkedin.com/in/govindmohan218/`,
+    // Optional: Email address
+    email: "info@govindmohan.com",
     // Content of the About Me section
     about: `I am a blockchain developer and researcher who has been in the space since 2014.
 I have participated in several hackathons, notably creating a top 10 hack at HackFS 2020 and 2022. I was also an advisor to Legal Hackers at UofT Law. The group organized a participating node in Global Legal Hackathon 2020 where the winning team went on to start a company.
