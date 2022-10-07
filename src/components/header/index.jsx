@@ -33,7 +33,7 @@ const Header = ({ metadata = {}, noBlog = false }) => {
         <h1 className={classes.name}>
           <Link to="/">{metadata.name}</Link>
         </h1>
-        <p className={classes.description}>{metadata.description}</p>
+        {noBlog && <p className={classes.description}>{metadata.description}</p>}
         <ul className={classes.list}>
           {twitter && (
             <li className={classes.item}>

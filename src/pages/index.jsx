@@ -15,17 +15,17 @@ import Seo from '../components/seo';
 const Index = ({ data }) => {
   const about = get(data, 'site.siteMetadata.about', false);
   const projects = get(data, 'site.siteMetadata.projects', false);
-  const posts = data.allMarkdownRemark.edges;
+  /* const posts = data.allMarkdownRemark.edges; */
   const experience = get(data, 'site.siteMetadata.experience', false);
   const skills = get(data, 'site.siteMetadata.skills', false);
   const publications = get(data, 'site.siteMetadata.publications', false);
-  const noBlog = !posts || !posts.length;
+  /* const noBlog = !posts || !posts.length; */
 
   console.log(publications)
   return (
     <Layout>
       <Seo />
-      <Header metadata={data.site.siteMetadata} noBlog={noBlog} />
+      <Header metadata={data.site.siteMetadata} noBlog={false} />
       {about && <SectionAbout about={about} />}
       {projects && projects.length && <SectionProjects projects={projects} />}
       {publications && publications.length && <SectionPublications publications={publications} />}
