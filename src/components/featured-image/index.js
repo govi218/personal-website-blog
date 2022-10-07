@@ -22,7 +22,6 @@ const NonStretchedImage = props => {
 }
 
 function FeaturedImage({ sizes }) {
-  console.log(sizes);
   return (
     <div className={classes.wrapper}>
       <NonStretchedImage fluid={sizes} alt="" />

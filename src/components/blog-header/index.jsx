@@ -19,7 +19,6 @@ const classes = {
 };
 
 const BlogHeader = ({ metadata = {}, noBlog = false }) => {
-  console.log(metadata);
   const twitter = get(metadata, 'author', false);
   const github = get(metadata, 'github', false);
   const linkedin = get(metadata, 'linkedin', false);

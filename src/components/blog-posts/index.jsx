@@ -4,7 +4,6 @@ import Summary from '../summary';
 import Card from '../card';
 
 const BlogPosts = ({ posts }) => {
-  console.log(posts)
   return (
     <div>
       {posts.map((post) => (

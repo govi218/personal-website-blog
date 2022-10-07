@@ -21,7 +21,6 @@ const Index = ({ data }) => {
   const publications = get(data, 'site.siteMetadata.publications', false);
   /* const noBlog = !posts || !posts.length; */
 
-  console.log(publications)
   return (
     <Layout>
       <Seo />
