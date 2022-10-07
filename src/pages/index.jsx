@@ -5,11 +5,12 @@ import React from 'react';
 import Header from '../components/header';
 import Layout from '../components/layout';
 import SectionAbout from '../components/section-about';
-import SectionBlog from '../components/section-blog';
+/* import SectionBlog from '../components/section-blog'; */
 import SectionExperience from '../components/section-experience';
 import SectionProjects from '../components/section-projects';
+import SectionPublications from '../components/section-publications';
 import SectionSkills from '../components/section-skills';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 
 const Index = ({ data }) => {
   const about = get(data, 'site.siteMetadata.about', false);
@@ -17,19 +18,22 @@ const Index = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
   const experience = get(data, 'site.siteMetadata.experience', false);
   const skills = get(data, 'site.siteMetadata.skills', false);
+  const publications = get(data, 'site.siteMetadata.publications', false);
   const noBlog = !posts || !posts.length;
 
+  console.log(publications)
   return (
     <Layout>
-      <SEO />
+      <Seo />
       <Header metadata={data.site.siteMetadata} noBlog={noBlog} />
       {about && <SectionAbout about={about} />}
       {projects && projects.length && <SectionProjects projects={projects} />}
-      {!noBlog && <SectionBlog posts={posts} />}
+      {publications && publications.length && <SectionPublications publications={publications} />}
       {experience && experience.length && (
         <SectionExperience experience={experience} />
       )}
       {skills && skills.length && <SectionSkills skills={skills} />}
+      {/* {!noBlog && <SectionBlog posts={posts} />} */}
     </Layout>
   );
 };
@@ -60,6 +64,11 @@ export const pageQuery = graphql`
         skills {
           name
           description
+        }
+        publications {
+          title
+          link
+          journal
         }
       }
     }

@@ -5,19 +5,21 @@ import React from 'react';
 import profileImg from '../../images/profile.jpg';
 
 const classes = {
-  wrapper: 'block mb-6 md:flex',
-  imageWrapper: 'w-full max-w-150',
+  wrapper: 'block mb-6 pt-8 mx-48',
+  imageWrapper: 'w-full max-w-150 align-middle mx-auto',
   image: 'rounded-full transform transition-all duration-150 hover:scale-105',
-  contentWrapper: 'flex-none pt-6 md:pt-1 md:flex-1 md:pl-20',
-  name: 'text-5xl text-gray-900 font-bold leading-tight hover:text-black',
-  description: 'text-gray-600',
-  list: 'mt-6 uppercase tracking-wider',
+  contentWrapper: 'flex-none pt-6 md:pt-1 md:flex-1',
+  title: 'text-5xl text-blue-900 pb-5 font-bold text-center leading-tight hover:text-black',
+  name: 'text-2xl text-gray-700 font-bold text-center leading-tight hover:text-black',
+  description: 'text-center text-gray-600',
+  list: 'text-center mt-6 uppercase tracking-wider',
   item: 'inline list-none pr-4',
   link:
     'inline-block py-2 font-semibold text-xs text-gray-600 hover:text-black',
 };
 
-const Header = ({ metadata = {}, noBlog = false }) => {
+const BlogHeader = ({ metadata = {}, noBlog = false }) => {
+  console.log(metadata);
   const twitter = get(metadata, 'author', false);
   const github = get(metadata, 'github', false);
   const linkedin = get(metadata, 'linkedin', false);
@@ -29,10 +31,14 @@ const Header = ({ metadata = {}, noBlog = false }) => {
           <img className={classes.image} src={profileImg} alt={metadata.name} />
         </Link>
       </div>
+      <br />
       <div className={classes.contentWrapper}>
-        <h1 className={classes.name}>
-          <Link to="/">{metadata.name}</Link>
+        <h1 className={classes.title}>
+          <Link to="/blog">{metadata.title}</Link>
         </h1>
+        <h2 className={classes.name}>
+          <Link to="/">{metadata.name}</Link>
+        </h2>
         <p className={classes.description}>{metadata.description}</p>
         <ul className={classes.list}>
           {twitter && (
@@ -59,17 +65,17 @@ const Header = ({ metadata = {}, noBlog = false }) => {
               </a>
             </li>
           )}
-          {/* {!noBlog && ( */}
-          {/* <li className={classes.item}> */}
-          {/* <Link className={classes.link} to="/blog"> */}
-          {/* Blog */}
-          {/* </Link> */}
-          {/* </li> */}
-          {/* )} */}
+          {!noBlog && (
+            <li className={classes.item}>
+              <Link className={classes.link} to="/blog">
+                Blog
+              </Link>
+            </li>
+          )}
         </ul>
       </div>
     </div>
   );
 };
 
-export default Header;
+export default BlogHeader;

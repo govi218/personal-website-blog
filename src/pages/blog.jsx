@@ -2,9 +2,9 @@ import { graphql } from 'gatsby';
 import React from 'react';
 
 import BlogPosts from '../components/blog-posts';
-import Header from '../components/header';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import BlogHeader from '../components/blog-header';
+import Container from '../components/container';
+import Seo from '../components/seo';
 import NotFound from '../pages/404';
 
 const Index = ({ data }) => {
@@ -16,11 +16,13 @@ const Index = ({ data }) => {
   }
 
   return (
-    <Layout>
-      <SEO title="Blog" />
-      <Header metadata={data.site.siteMetadata} />
-      {!noBlog && <BlogPosts posts={posts} />}
-    </Layout>
+    <div className="bg-gray-100">
+      <Container>
+        <Seo title="Blog" />
+        <BlogHeader metadata={data.site.siteMetadata} />
+        {!noBlog && <BlogPosts posts={posts} />}
+      </Container>
+    </div>
   );
 };
 
@@ -50,6 +52,13 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            featuredImage{
+              childImageSharp {
+                sizes(maxWidth: 850) {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
           }
         }
       }

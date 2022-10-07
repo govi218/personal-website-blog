@@ -1,76 +1,112 @@
 module.exports = {
   siteMetadata: {
     // Site URL for when it goes live
-    siteUrl: `https://elastic-meninsky-aa7c74.netlify.app/`,
+    siteUrl: `https://govindmohan.com`,
     // Your Name
-    name: 'Ryan Fitzgerald',
+    name: 'Govind Mohan',
     // Main Site Title
-    title: `Ryan Fitzgerald | Full-Stack Developer`,
+    title: `Thinking With Portals`,
     // Description that goes under your name in main bio
-    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit, ipsum.`,
+    description: `Musings on technology, media, and living on the edge`,
     // Optional: Twitter account handle
-    author: `@rfitzio`,
+    author: `@_gov218`,
     // Optional: Github account URL
-    github: `https://github.com/ryanfitzgerald`,
+    github: `https://github.com/govi218`,
     // Optional: LinkedIn account URL
-    linkedin: `https://www.linkedin.com/in/ryanafitzgerald/`,
+    linkedin: `https://www.linkedin.com/in/govindmohan218/`,
     // Content of the About Me section
-    about: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus perferendis porro cumque ea error ab voluptatem. Temporibus adipisci exercitationem similique itaque quibusdam laudantium, qui molestiae quas, aut amet animi id.`,
+    about: `I have been involved in software development since I was 12, although I was fascinated by technology long before. This fascination grew with my studies of Computer Science, Philosophy and Economics at University of Toronto.
+
+I have several research interests, of which I am currently exploring peer-to-peer networking and document ingestion. I am very interested in information theory, fractals, non-standard analysis, category/type theory, and neurosymbolic/mathematical logic (did I miss any buzzwords?).`,
     // Optional: List your projects, they must have `name` and `description`. `link` is optional.
     projects: [
       {
-        name: 'Devfolio',
+        name: 'Supercluster',
         description:
-          'A zero-config and blazing fast personal site + blog built with GatsbyJs and TailwindCSS',
-        link: 'https://github.com/RyanFitzgerald/devfolio',
+          'Supercluster Files enables DAOs to share content between team members without having to rely on centralized parties.',
+        link: 'https://supercluster.dev',
       },
       {
-        name: 'ChromeExtensionKit',
+        name: 'ipfs-go-recovery',
         description:
-          'Kit to jump-start your Chrome extension projects with a variety of battle-tested starter templates',
-        link: 'https://chromeextensionkit.com/?ref=devfolio',
+          'IPLD middleware that adds redundancy using erasure coding',
+        link: 'https://github.com/Wondertan/go-ipfs-recovery',
       },
       {
-        name: 'Another Cool Project',
+        name: '.emacs.d',
         description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit ducimus perferendis',
-        link: 'https://github.com/RyanFitzgerald/devfolio',
+          'My emacs config',
+        link: 'https//github.com/govi218/.emacs.d',
+      },
+      {
+        name: 'Rabbithole',
+        description:
+          'A chrome extension that allows you to track your search paths through the internet',
+        link: 'https://rabbithole.to',
+      },
+      {
+        name: 'CSBC2000',
+        description:
+          'Supercluster Files enables DAOs to share content between team members without having to rely on centralized parties.',
+        link: 'https://github.com/govi218/CSBC2000',
       },
     ],
     // Optional: List your experience, they must have `name` and `description`. `link` is optional.
     experience: [
       {
-        name: 'Acme Corp',
-        description: 'Full-Stack Developer, February 2020 - Present',
-        link: 'https://github.com/RyanFitzgerald/devfolio',
+        name: 'Oproma',
+        description: 'Senior Software Developer, September 2022 - Present',
+        link: 'https://oproma.com',
       },
       {
-        name: 'Globex Corp',
-        description: 'Full-Stack Developer, December 2017 - February 2020',
-        link: 'https://github.com/RyanFitzgerald/devfolio',
+        name: 'App development contract',
+        description: 'Fullstack developer, September 2022 - Present',
+        link: 'https://www.getluut.com/',
       },
       {
-        name: 'Hooli',
-        description: 'Full-Stack Developer, May 2015 - December 2017',
-        link: 'https://github.com/RyanFitzgerald/devfolio',
+        name: 'York University',
+        description: 'Blockchain Development Instructor, September 2022 - Present',
+        link: 'https://continue.yorku.ca/programs/certificate-in-blockchain-development/#instructors-2',
+      },
+      {
+        name: 'Virgil Systems',
+        description: 'Lead Developer, January 2019 - February 2022',
+        link: 'https://virgilsystems.com',
+      },
+      {
+        name: 'DataX Research',
+        description: 'Co-Founder, October 2018 - Present',
+        link: 'https://dataxresearch.net',
+      },
+      {
+        name: 'Software development contracts',
+        description: 'Full-Stack Developer, May 2015 - October 2018',
+        link: 'https://github.com/govi218',
       },
     ],
     // Optional: List your skills, they must have `name` and `description`.
     skills: [
       {
-        name: 'Languages & Frameworks',
+        name: 'Languages',
         description:
-          'JavaScript (ES6+), Golang, Node.js, Express.js, React, Ruby on Rails, PHP',
+          'JavaScript, Python, Golang, Java, C/C++, Dart, Prolog, Shell, Solidity, HTML/CSS, Markdown, LaTex',
       },
       {
-        name: 'Databases',
-        description: 'MongoDB, PostreSQL, MySQL',
+        name: 'Frameworks and technologies',
+        description: 'Node.js, Express.js, React, Flutter, Flask, Android, Tailwind CSS, PostreSQL, Gin, IPFS, Poco',
       },
       {
         name: 'Other',
         description:
-          'Docker, Amazon Web Services (AWS), CI / CD, Microservices, API design, Agile / Scrum',
+          'Docker, AWS, GCP, Digital Ocean, CI/CD, API design, P2P, Agile/Scrum',
       },
+    ],
+    publications: [
+      {
+        title: 'Distributed Fractionalized Data Networks For Data Integrity',
+	link: 'https://ieeexplore.ieee.org/document/9169392',
+	journal: 'IEEE Xplore, 17 August 2020',
+      }
     ],
   },
   plugins: [
@@ -96,8 +132,9 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
-              wrapperStyle: `margin: 0 0 30px;`,
+              maxWidth: 1100,
+              linkImagesToOriginal: false,
+              // wrapperStyle: 'margin: 15px -30px !important',
             },
           },
           {

@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Ryan Fitzgerald",
   "dependencies": {
-    "gatsby": "^2.24.67",
+    "gatsby": "^4.21.0",
     "gatsby-image": "^2.4.20",
     "gatsby-plugin-feed": "^2.5.14",
     "gatsby-plugin-google-analytics": "^2.3.18",
@@ -41,7 +41,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",

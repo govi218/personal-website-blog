@@ -1,21 +1,24 @@
 import React from 'react';
 
-import Section from '../section';
-import SummaryItem from '../summary-item';
+import Summary from '../summary';
+import Card from '../card';
 
 const BlogPosts = ({ posts }) => {
+  console.log(posts)
   return (
-    <Section title="All Blog Posts">
+    <div>
       {posts.map((post) => (
-        <SummaryItem
-          key={post.node.fields.slug}
-          name={post.node.frontmatter.title}
-          description={post.node.frontmatter.description}
-          link={post.node.fields.slug}
-          internal
-        />
+        <Card key={post.node.fields.slug}>
+          <Summary
+            date={post.node.frontmatter.date}
+            title={post.node.frontmatter.title}
+            excerpt={post.node.excerpt}
+            image={post.node.frontmatter.featuredImage}
+            slug={post.node.fields.slug}
+          />
+        </Card>
       ))}
-    </Section>
+    </div>
   );
 };
 
